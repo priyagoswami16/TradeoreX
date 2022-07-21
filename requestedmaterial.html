@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" type="text/jacascript"></script>
+
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/multi-select.css">
+  <style>
+    .search-icon-form {
+      background: rgba(171, 171, 171, 0.2);
+      border-radius: 4px;
+      width: 400px;
+
+    }
+
+    .modal.fade .modal-dialog {
+      transition: transform 0s !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .fade {
+      transition: none !important;
+    }
+  </style>
+
+  <title>TradeoreX</title>
+</head>
+
+<body>
+  <header class="sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-white p-0 pt-1">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/img/logo.svg" class="logo">
+        </a>
+
+        <div class="search-form">
+          <form class="">
+            <div class="input-group">
+              <p class="input-group-text" id="basic-addon1">
+                <img src="/assets/img/search-icon.svg">
+              </p>
+              <input type="text" class="form-control search-input" placeholder="Search" aria-label="Search"
+                aria-describedby="basic-addon1">
+            </div>
+          </form>
+        </div>
+
+        <div class="navigation">
+          <ul class="navbar-nav mt-2">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html">
+                <img src="/assets/img/home-icon.svg" class="nav-icon">
+                <p>Home</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="network.html">
+                <img src="/assets/img/network-icon.svg" class="nav-icon">
+                <span class="notify-count">9</span>
+                <p>Network</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="notifications.html">
+                <img src="/assets/img/notification-icon.svg" class="nav-icon">
+                <span class="notify-count">+99</span>
+                <p>Notification</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="messages.html">
+                <img src="/assets/img/messages-icon.svg" class="nav-icon">
+                <span class="notify-count">9</span>
+                <p>Messages</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="materialinquiry.html">
+                <img src="/assets/img/material-inquiry.svg" class="nav-icon">
+                <span class="notify-count">9</span>
+                <p>Material Inquiry</p>
+              </a>
+              <div class="nav-active"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="marketplace.html">
+                <img src="/assets/img/marketplace-icon.svg" class="nav-icon">
+                <p>Marketplace</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="auction.html">
+                <img src="/assets/img/auction-icon.svg" class="nav-icon">
+                <p>Auction</p>
+              </a>
+            </li>
+            <li class="nav-item profile-nav">
+              <a class="nav-link" aria-current="page" href="#">
+
+                <!-- Progress bar 1 -->
+                <div class="progress mx-auto" data-value='90'>
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div
+                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/home-icon.svg" class="nav-icon small">
+                  </div>
+                </div>
+                <!-- END -->
+                <p>Profile</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- ./navigation -->
+
+      </nav>
+    </div>
+    <!-- ./container -->
+  </header>
+
+
+
+  <div class="main">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+
+          <div class="navigation-card mt-0">
+            <div class="navigation-heading">
+              <h6>Manage your network</h6>
+            </div>
+            <div class="divider"></div>
+
+            <div class="material-nav-option">
+              <ul class="nav flex-column">
+                <li class="side-nav">
+                  <div class="side-link">
+                    <a href="/requestedmaterial.html" class="material-nav">
+                      <img src="/assets/img/req-material.svg" class="material-icon">
+                      Request Material
+                    </a>
+                  </div>
+                  <div class="side-nav-img">
+                    <img src="/assets/img/plus-icon.svg" alt="">
+                  </div>
+                </li>
+                <li class="side-nav">
+                  <div class="side-link side-nav-active">
+                    <a href="/offermaterial.html" class="material-nav">
+                      <img src="/assets/img/offer-material.svg" class="material-icon">
+                      Offer Material
+                    </a>
+                  </div>
+                  <div class="side-nav-img">
+                    <img src="/assets/img/plus-icon.svg" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- ./post-inquiry-navigation -->
+
+          <div class="navigation-card">
+            <div class="navigation-heading">
+              <h6>inquiry stats</h6>
+            </div>
+            <div class="divider"></div>
+
+            <div class="material-nav-option">
+              <ul class="nav flex-column">
+                <li class="side-nav">
+                  <div class="side-link">
+                    <a href="/inactivelisting.html" class="material-nav">
+                      <img src="/assets/img/inq-received.svg" class="material-icon">
+                      Inquiries Received
+                    </a>
+                  </div>
+                  <div class="count-material">03</div>
+                </li>
+                <li class="side-nav">
+                  <div class="side-link">
+                    <a href="/inactivelisting.html" class="material-nav">
+                      <img src="/assets/img/inq-sent.svg" class="material-icon">
+                      Inquiries Sent
+                    </a>
+                  </div>
+                  <div class="count-material">03</div>
+                </li>
+                <li class="side-nav">
+                  <div class="side-link">
+                    <a href="/savedoffer.html" class="material-nav">
+                      <img src="/assets/img/saved-material.svg" class="material-icon">
+                      Saved Offers
+                    </a>
+                  </div>
+                  <div class="count-material">03</div>
+                </li>
+                <li class="side-nav">
+                  <div class="side-link">
+                    <a href="/ignoredoffer.html" class="material-nav">
+                      <img src="/assets/img/ignored-offers.svg" class="material-icon">
+                      Ignored Offers
+                    </a>
+                  </div>
+                  <div class="count-material">03</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- ./inquiry-navigation -->
+
+          <!-- ./filter-navigation -->
+
+          <div class="ad-banner">
+            <img src="/assets/img/ad-banner.png">
+          </div>
+          <!-- ./ad-banner -->
+
+          <div class="ad-banner">
+            <img src="/assets/img/ad-banner.png">
+          </div>
+          <!-- ./ad-banner -->
+
+        </div>
+        <!-- ./left-col -->
+
+        <div class="col-md-9">
+
+          <div class="requested-inquiry bg-white border">
+            <div class="navigation-heading border-bottom">
+              <h6 class="text-black">We Want To Offer Below Material</h6>
+            </div>
+
+            <form id="requestMaterial" action="" class="request-form">
+
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
+              </div>
+
+              <div class="row my-3">
+                <div class="col">
+                  <label for="commodity">Comodity</label>
+                  <div class="">
+                    <select id="commodity" name="commodity" multiple>
+                      <option value="Commodity 1">Commodity 1</option>
+                      <option value="Commodity 2">Commodity 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="type">Type</label>
+                  <div class="">
+                    <select id="type" name="type" multiple>
+                      <option value="Steel">Steel</option>
+                      <option value="Rods">Rods</option>
+                      <option value="Coil">Coil</option>
+                      <option value="Container">Container</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <div class="col">
+                  <label for="from">From</label>
+                  <div class="">
+                    <select id="from" name="from" multiple>
+                      <option value="Steel">Steel</option>
+                      <option value="Rods">Rods</option>
+                      <option value="Coil">Coil</option>
+                      <option value="Container">Container</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="quality">Quality</label>
+                  <div class="">
+                    <select id="quality" name="quality" multiple>
+                      <option value="Steel">Steel</option>
+                      <option value="Rods">Rods</option>
+                      <option value="Coil">Coil</option>
+                      <option value="Container">Container</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <div class="col">
+                  <label for="products">Products</label>
+                  <div class="">
+                    <select id="products" name="products" multiple>
+                      <option value="HOT Rolled Coil">HOT Rolled Coil</option>
+                      <option value="Steel Sheet">Steel Sheet</option>
+                      <option value="Aluminum">Aluminum</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="origin">Origin</label>
+                  <div class="position-menu-within">
+                    <select id="origin" name="origin" class="form-control" multiple>
+                      <option value="India">India</option>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Japan">Japan</option>
+                      <option value="China">China</option>
+                      <option value="Germany">Germany</option>
+                      <option value="France">France</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <div class="col">
+                  <label for="thikness">Thikness Range</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" name="thikness1" id="thikness1" class="form-control request-input"
+                          aria-label="thikness1">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="thikness_type" id="thikness_type">
+                            <option value="price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" name="thikness2" id="thikness2" class="form-control request-input"
+                          aria-label="thikness2">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="thikness_type2" id="thikness_type2">
+                            <option value="Price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="products">Width Range</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" id="widthrange1" class="form-control request-input" aria-label="thikness">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="widthrangetype" id="widthrangetype">
+                            <option value="Price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" id="widthrange2" name="widthrange2" class="form-control request-input" aria-label="thikness">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="widthrangetype2" id="widthrangetype2">
+                            <option value="Price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-3">
+                <div class="col">
+                  <label for="products">Length Range</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" id="lengthrange1" name="lengthrange1" class="form-control request-input" aria-label="thikness">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="lengthrangetype" id="lengthrangetype">
+                            <option value="Price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" id="lengthrange2" name="lengthrange2" class="form-control request-input" aria-label="thikness">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="lengthrangetype2" id="lengthrangetype2">
+                            <option value="Price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="products">Available Quantity</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group">
+                        <input type="text" id="availablequantity" name="availabequantity" class="form-control request-input" aria-label="thikness">
+                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                          <select name="availabeType" id="availabeType">
+                            <option value="Price">Price</option>
+                            <option value="Unit">Unit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row my-3">
+                <div class="col">
+                  <label for="delivery">Delivery Terms (Incomterms)</label>
+                  <div class="">
+                    <select id="delivery" name="delivery" multiple>
+                      <option value="HOT Rolled Coil">HOT Rolled Coil</option>
+                      <option value="Steel Sheet">Steel Sheet</option>
+                      <option value="Aluminum">Aluminum</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="payment">Payment Terms</label>
+                  <div class="position-menu-within">
+                    <input type="text" class="form-control request-input" placeholder="" maxlength="200"  id="payment" name="payment">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-4">
+                <label class="form-label" for="additional">Additional Information</label>
+                <textarea class="form-control request-input" id="additional" rows="4"
+                  placeholder="Additional Information"></textarea>
+              </div>
+
+
+              <!-- <div class="row mx-5 py-3">
+                <div class="col d-flex justify-content-center">
+                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-3 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Preview Inquiry</button>
+                </div>
+              </div>
+       -->
+
+
+            </form>
+
+            <div class="devider border-warning border-bottom"></div>
+
+            <div class="row mx-5 py-2">
+              <div class="col-md-1 px-0">
+                <span style="color: #123d59; font-weight: 500;">NOTE:</span>
+              </div>
+              <div class="col-md-11 px-0">
+                <span style="color: #123d59; font-size: 13px; font-weight: 400;">Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit. Delectus aliquam illo facilis soluta tenetur, laborum molestiae magni beatae, nam
+                  asperiores laudantium! Veritatis id velit repellat recusandae quibusdam, libero amet rem.</span>
+              </div>
+            </div>
+
+            <!-- <div class="product-tags bg-danger">
+                <h6 class="mb-3">Product Tags</h6>
+                <span class="each-product-tag">HMS</span>
+                <span class="each-product-tag">Hot Rolled Coil</span>
+                <span class="each-product-tag">Rebar</span>
+                <span class="each-product-tag">HDGI</span>
+                <span class="each-product-tag">Cold Rolled Coil</span>
+              </div> -->
+
+
+            <section class="productcheck bg-grey border-bottom border-top">
+              <div class="row mx-5 py-3">
+                <div class="col">
+                  <h6 style="color: #123d59; font-weight: 500;">Products Tags</h6>
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-warning text-white px-3 py-0 btn-block mb-4 me-2"
+                      style="font-size: 13px;">HMS
+                      <img src="/assets/img/ignore-offers.svg" width="15px">
+                    </button>
+                    <button type="submit" class="btn btn-warning text-white px-3 py-0 btn-block mb-4 me-2"
+                      style="font-size: 13px;">Rebar
+                      <img src="/assets/img/ignore-offers.svg" width="15px">
+                    </button>
+                    <button type="submit" class="btn btn-warning text-white px-3 py-0 btn-block mb-4 me-2"
+                      style="font-size: 13px;">Hot Rolled Coil
+                      <img src="/assets/img/ignore-offers.svg" width="15px">
+                    </button>
+                    <button type="submit" class="btn btn-warning text-white px-3 py-0 btn-block mb-4 me-2"
+                      style="font-size: 13px;">Cold Rolled Coil
+                      <img src="/assets/img/ignore-offers.svg" width="15px">
+                    </button>
+                    <button type="submit" class="btn btn-warning text-white px-3 py-0 btn-block mb-4 me-2"
+                      style="font-size: 13px;">Extrusion
+                      <img src="/assets/img/ignore-offers.svg" width="15px">
+                    </button>
+                    <button type="submit" class="btn btn-warning text-white px-3 py-0 btn-block mb-4"
+                      style="font-size: 13px;">PPGI
+                      <img src="/assets/img/ignore-offers.svg" width="15px">
+                    </button>
+                  </div>
+                </div>
+                <!-- </div>  -->
+              </div>
+            </section>
+
+
+            <!-- search box -->
+            <section class="search-box">
+              <div class="row mx-5 py-3">
+                <div class="col">
+                  <h6 style="color: #123d59; font-weight: 500;">Select the products you deal in</h6>
+                  <div class="search-icon-form bg-grey mt-3">
+                    <form class="">
+                      <div class="input-group">
+                        <p class="input-group-text" id="basic-addon1">
+                          <img src="/assets/img/search-icon.svg">
+                        </p>
+                        <input type="text" class="form-control search-input" placeholder="Search Products"
+                          aria-label="Search" aria-describedby="basic-addon1">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- check box -->
+
+            <section class="formcheck bg-grey border-bottom border-top" style="overflow-y: scroll;">
+              <div class="row mx-5 my-3 py-2">
+                <div class="col-md-12">
+                  <div class="py-2">
+                    <div class="form-check form-check-inline">
+                      <input type="Checkbox" class="form-check-input border border-outline-none" id="ckbCheckAll"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <span style="color: #123d59; font-weight: 500;">Flat Carben Steel Products</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                      <input name="Checkbox1" class="form-check-input checkBoxClass" type="checkbox"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label px-2" for="inlineRadio1"
+                        style="color: #123d59; font-size: 16px;">Hot Rolled Coil</label>
+                    </div>
+                    <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                      <input name="Checkbox1" class="form-check-input checkBoxClass" type="checkbox"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option2">
+                      <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 16px;">Cold
+                        Rolled Coil</label>
+                    </div>
+                    <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                      <input name="Checkbox1" class="form-check-input checkBoxClass" type="checkbox"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option3">
+                      <label class="form-check-label" for="inlineRadio3" style="color: #123d59; font-size: 16px;">Cold
+                        Rolled Coil</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                      <input name="Checkbox1" class="form-check-input checkBoxClass" type="checkbox"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option4">
+                      <label class="form-check-label px-2" for="inlineRadio1"
+                        style="color: #123d59; font-size: 16px;">Tin Plate</label>
+                    </div>
+                    <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                      <input name="Checkbox1" class="form-check-input checkBoxClass" type="checkbox"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option5">
+                      <label class="form-check-label" for="inlineRadio1"
+                        style="color: #123d59; font-size: 16px;">PPGI</label>
+                    </div>
+                    <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                      <input name="Checkbox1" class="form-check-input checkBoxClass" type="checkbox"
+                        name="inlineRadioOptions" id="inlineRadio1" value="option6">
+                      <label class="form-check-label" for="inlineRadio3" style="color: #123d59; font-size: 16px;">Hot
+                        Rolled Coil</label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- end -->
+            </section>
+
+            <!-- submit btn -->
+            <div class="row mx-5 py-3">
+              <div class="col d-flex justify-content-center">
+                <button type="submit" id="submitbtn" onclick="getInputs();"
+                  class="btn btn-warning text-white px-3 btn-block" data-bs-toggle="modal"
+                  data-bs-target="#myModal">Preview Inquiry</button>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- ./inquiry-info -->
+        </div>
+        <!-- ./each-inquiry -->
+
+
+      </div>
+      <!-- ./right-col -->
+
+    </div>
+  </div>
+  <!-- ./container -->
+
+  </div>
+  <!-- ./main -->
+
+  <!-- model part -->
+  <!-- The Modal -->
+  <div class=" modal fade" id="myModal">
+    <div class="modal-dialog  modal-dialog-centered modal-lg">
+      <!-- <div class="modal-content"> -->
+      <!-- Modal body -->
+      <!-- <div class="">        -->
+      <div class=" each-inquiry">
+        <div class="inquiry-by d-flex justify-content-between">
+          <div class="time-and-date">
+            <img src="/assets/img/listed-on.svg">
+            <span>Listed on - 9th Jan 2021</span>
+          </div>
+
+          <div class="offered-by">
+            <img src="/assets/img/offered-by.svg">
+            <span>Offered By - <span class="text-theme-secondary">Vikram Singh | TradeoreX</span></span>
+          </div>
+
+          <div class="buy-offer">
+            <button type="button" class="buy-offer-btn">
+              <img src="/assets/img/active.svg" class="button-icon">
+              Buy Offer
+            </button>
+          </div>
+        </div>
+
+        <div class="heading-inquiry mt-3">
+          <h5 id="tab-title"></h5>
+          <!-- <h5>Hot Rolled Coils / Sheets / Slabs / Slits, and can be longer like this one</h5> -->
+        </div>
+
+        <div class="inquiry-info row mx-4 mt-0 p-0">
+          <div class="col-md-6 mb-0 pb-0 ">
+            <table class="table" id="">
+              <tbody>
+                <tr>
+                  <th scope="row">Commodity</th>
+                  <td id="comodityShow"></td>
+                </tr>
+                <tr>
+                  <th scope="row">From</th>
+                  <td id="fromShow">Coils</td>
+                </tr>
+                <tr>
+                  <th scope="row">Products</th>
+                  <td id="productsShow"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Thickness Range</th>
+                  <td id="tab-thikness">
+                    <span id="thickness1Show"></span> 
+                    <span id="thicknessTypeShow"></span>
+                    <span>to</span> 
+                    <span id="thickness2Show"></span>
+                    <span id="thicknessTypeShow2"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Length Range</th>
+                  <td id="tab-length">
+                    <span id="lengthRangeShow"></span> 
+                    <span id="lengthRangeType"></span>
+                    <span>to</span> 
+                    <span id="lengthRangeShow2"></span>
+                    <span id="lengthRangeType2"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Delivery Terms</th>
+                  <td id="deliveryShow"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Type</th>
+                  <td id="typeShow"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Quality</th>
+                  <td id="qualityShow">Prime</td>
+                </tr>
+                <tr>
+                  <th scope="row">Origin</th>
+                  <td id="originShow"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Width Range</th>
+                  <td id="tab-widthrange">
+                    <span id="widthRange1"></span> 
+                    <span id="widthRangeType"></span>
+                    <span>to</span> 
+                    <span id="widthRange2"></span>
+                    <span id="widthRangeType2"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Required Quantity</th>
+                  <td>
+                    <span id="availableShow"></span>
+                    <span id="availableTypeShow"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Payment Terms</th>
+                  <td id="paymentShow"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="additional-info py-0">
+            <table class="table border-top">
+              <tbody class="">
+                <tr class="additional-table">
+                  <th scope="row">Additional information</th>
+                  <td id="additionalShow"> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="product-tags">
+            <h6 class="mb-2">Product Tags</h6>
+            <div id="categoryShow"></div>
+            <!-- <span id="categoryShow" class="each-product-tag"></span> -->
+          </div>
+
+          <div class="d-flex justify-content-end py-2">
+            <button class="btn btn-outline-warning py-1 px-3 me-5">
+              Cancel
+            </button>
+            <button class="btn bg-warning py-1 px-3 text-white">
+              Publish
+            </button>
+
+          </div>
+        </div>
+        <!-- ./inquiry-info -->
+
+      </div>
+    </div>
+
+    <!-- </div>
+      </div> -->
+  </div>
+
+
+
+  <!-- model end  -->
+
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    type="text/javascript"></script>
+  <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/jquery.multi-select.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#products').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#type').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#commodity').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#from').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#quality').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      
+      $('#origin').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#delivery').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#payment').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#thikness').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+    });
+  </script>
+  <script>
+
+    function getInputs() {
+
+      var title = document.getElementById('title').value;
+      var additional = document.getElementById('additional').value;
+
+      var commodity = [];
+      for (var option of document.getElementById('commodity').options) {
+        if (option.selected) {
+            commodity.push(option.value); 
+            // commodity.forEach(myFunction());         
+            // console.log(commodity);
+        }
+      }
+      var comodityAll = commodity.join(' | ');
+      console.log(comodityAll);
+       
+      var type = [];
+      for(var option of document.getElementById('type').options){
+        if(option.selected){
+          type.push(option.value);
+        }
+      }
+      var typeAll = type.join(' | ');
+      console.log(typeAll);
+
+      var products = [];
+      for(var option of document.getElementById('products').options){
+        if(option.selected){
+         products.push(option.value);
+        }
+      }
+      var productAll = products.join(' | ');
+      console.log(productAll);
+
+      var origin = [];
+      for(var option of document.getElementById('origin').options){
+        if(option.selected){
+         origin.push(option.value);
+        }
+      }
+      var originAll = origin.join(' | ');
+      console.log(originAll);
+
+      var from = [];
+      for(var option of document.getElementById('from').options){
+        if(option.selected){
+         from.push(option.value);
+        }
+      }
+      var fromAll = from.join(' | ');
+      console.log(fromAll);
+
+      var quality = [];
+      for(var option of document.getElementById('quality').options){
+        if(option.selected){
+         quality.push(option.value);
+        }
+      }
+      var qualityAll = quality.join(' | ');
+      console.log(qualityAll);
+    
+      // var origin = document.getElementById('origin').value;
+      var delivery = document.getElementById('delivery').value;
+      var from = document.getElementById('from').value;
+      var quality = document.getElementById('quality').value;
+      var payment = document.getElementById('payment').value;
+      var thikness1 = document.getElementById('thikness1').value;
+      var thikness2 = document.getElementById('thikness2').value;
+      var thikness_type = document.getElementById('thikness_type').value;
+      var thikness_type2 = document.getElementById('thikness_type2').value;
+      var widthrange1 = document.getElementById('widthrange1').value;
+      var widthrange2 = document.getElementById('widthrange2').value;
+      var widthrangetype = document.getElementById('widthrangetype').value;
+      var widthrangetype2 = document.getElementById('widthrangetype2').value;
+      var lengthrange1 = document.getElementById('lengthrange1').value;
+      var lengthrange2 = document.getElementById('lengthrange2').value;
+      var lengthrangetype = document.getElementById('lengthrangetype').value;
+      var lengthrangetype2 = document.getElementById('lengthrangetype2').value;
+      var availablequantity = document.getElementById('availablequantity').value;
+      var availabletype = document.getElementById('availabeType').value;
+
+
+      // getting checkbox values
+      var checkboxes = document.querySelectorAll('input[name="Checkbox1"]');
+      var values = [];
+      // looping through all checkboxes
+      // if checked property is true then push
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked == true) {
+          values.push(checkboxes[i].value);
+        }
+      }
+      // console.log(values);
+
+      let category = "";
+
+      for (let i = 0; i < values.length; i++) {
+        category += "<span class='each-product-tag'>" + values[i] + "</span>";
+        // console.log(category);
+      }
+      var categoriesShow = document.getElementById('categoryShow').innerHTML = category;
+
+      // Send the inputs to popup
+      var titleShow = document.getElementById('tab-title').innerHTML = title;
+      var additionalShow = document.getElementById('additionalShow').innerHTML = additional;
+      var comodityShow = document.getElementById('comodityShow').innerHTML = comodityAll;
+      var fromShow = document.getElementById('fromShow').innerHTML = fromAll;
+      var qualityShow = document.getElementById('qualityShow').innerHTML = qualityAll;
+      var typeShow = document.getElementById('typeShow').innerHTML = type;
+      var productsShow = document.getElementById('productsShow').innerHTML = products;
+      var originShow = document.getElementById('originShow').innerHTML = origin;
+      var deliveryShow = document.getElementById('deliveryShow').innerHTML = delivery;
+      var paymentShow = document.getElementById('paymentShow').innerHTML = payment;
+      var thickness1Show = document.getElementById('thickness1Show').innerHTML = thikness1;
+      var thickness2Show = document.getElementById('thickness2Show').innerHTML = thikness2;
+      var thicknessTypeShow = document.getElementById('thicknessTypeShow').innerHTML = thikness_type;
+      var thicknessTypeShow2 = document.getElementById('thicknessTypeShow2').innerHTML = thikness_type2;
+      var widthRange1 = document.getElementById('widthRange1').innerHTML = widthrange1;
+      var widthRange2 = document.getElementById('widthRange2').innerHTML = widthrange2;
+      var widthRangeType = document.getElementById('widthRangeType').innerHTML = widthrangetype;
+      var widthRangeType2 = document.getElementById('widthRangeType2').innerHTML = widthrangetype2;
+      var lengthRangeShow = document.getElementById('lengthRangeShow').innerHTML = lengthrange1;
+      var lengthRangeShow2 = document.getElementById('lengthRangeShow2').innerHTML = lengthrange2;
+      var lengthRangeType = document.getElementById('lengthRangeType').innerHTML = lengthrangetype;
+      var lengthRangeType2 = document.getElementById('lengthRangeType2').innerHTML = lengthrangetype2;
+      var availableShow = document.getElementById('availableShow').innerHTML = availablequantity;
+      var availableTypeShow = document.getElementById('availableTypeShow').innerHTML = availableTypeShow;
+
+    }
+
+
+   
+
+  </script>
+</body>
+
+</html>
